@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>送你的信</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #87ceeb url('https://i.imgur.com/2zN21wG.png') no-repeat center bottom;
+    background-size: cover;
+    color: black;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+  #container {
+    background: rgba(255 255 255 / 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 450px;
+  }
+  button {
+    margin: 15px 10px 0 10px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid black;
+    background: #ffde59;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #ffea7a;
+  }
+  #secondPage {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <div id="firstPage">
+      <p>嗨 Ayumi，</p>
+      <p>有些话我放在心里很久了，也一直不知道该不该说。<br />
+      我不是来责怪什么的，只是想单纯地了解一些过去的事。<br />
+      如果你不想谈，我可以理解，也不会打扰你；<br />
+      但如果你愿意听听，我很想把我的心声告诉你，可以吗？</p>
+      <button onclick="showSecondPage(true)">boleh~~</button>
+      <button onclick="showSecondPage(false)">nahhh</button>
+    </div>
+
+    <div id="secondPage">
+      <p id="contentBoleh" style="display:none;">
+        谢谢你，让我成长了许多😆。虽然我们结束了关系💔，但我还是很喜欢你♥️，很想你。每次和你经过时👥，我都会用我的余光看你👀，每一次都会呆呆的看着你离去👤，想当时😌，我还能跑过去🏃🏿‍♂️，找你聊天和一起走💬。我想复合💞，但我知道不可能❌，我也不想受第二次伤害🤕。不知道其实在我对你表白时🥴，你接受时😍，你喜不喜欢我😻，我开始有想过，你是在玩感情🎲，过后也想过，你真的在玩感情🤧，不知道我猜测的准不准🤓。我也不懂为什么你在2024后突然对我冷漠🥺，不知道是不是因为有了brayden了😭，还是分班了🏫，这问题已经困惑了我半年🤔，我想知道答案😀。总之，希望你能快快乐乐😁，金榜题名🏆。对了，brayden喜欢你♥️，不懂你喜不喜欢brayden呢？👻
+      </p>
+      <p id="contentNahhh" style="display:none;">谢谢你。</p>
+    </div>
+  </div>
+
+<script>
+  function showSecondPage(agree) {
+    document.getElementById('firstPage').style.display = 'none';
+    document.getElementById('secondPage').style.display = 'block';
+    if (agree) {
+      document.getElementById('contentBoleh').style.display = 'block';
+      document.getElementById('contentNahhh').style.display = 'none';
+    } else {
+      document.getElementById('contentBoleh').style.display = 'none';
+      document.getElementById('contentNahhh').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
